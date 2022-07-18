@@ -28,7 +28,7 @@ const getQuestion = () => {
 const findMissingElement = (question) => {
   const progression = question.split(' ');
   let progressionDiff = 0;
-  if (progression[1] !== '...') {
+  if (progression[1] !== '..') {
     progressionDiff = Number(progression[1]) - Number(progression[0]);
   } else {
     progressionDiff = Number(progression[3]) - Number(progression[2]);
