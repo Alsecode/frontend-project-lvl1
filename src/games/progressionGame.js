@@ -43,7 +43,7 @@ const findMissingElement = (question) => {
   return missingElement;
 };
 
-export const progressionGame = () => {
+const progressionGame = () => {
   const name = greetUser('What number is missing in the progression?');
   for (let i = 0; i < 3; i += 1) {
     const question = getQuestion();
@@ -56,3 +56,5 @@ export const progressionGame = () => {
   }
   congratulateUser(name);
 };
+
+export default progressionGame;

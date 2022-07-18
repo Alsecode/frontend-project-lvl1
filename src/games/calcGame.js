@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../getRandomNumber.js';
+import getRandomNumber from '../getRandomNumber.js';
 import {
   greetUser, questionUser, checkUserAnswer, congratulateUser,
 } from '../index.js';
@@ -38,7 +38,7 @@ const solveExpression = (question) => {
   return result;
 };
 
-export const calcGame = () => {
+const calcGame = () => {
   const name = greetUser('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
     const question = getQuestion();
@@ -51,3 +51,5 @@ export const calcGame = () => {
   }
   congratulateUser(name);
 };
+
+export default calcGame;

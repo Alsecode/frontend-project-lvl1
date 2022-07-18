@@ -1,11 +1,11 @@
-import { getRandomNumber } from '../getRandomNumber.js';
+import getRandomNumber from '../getRandomNumber.js';
 import {
   greetUser, questionUser, checkUserAnswer, congratulateUser,
 } from '../index.js';
 
 const isEven = (number) => (number % 2 === 0);
 
-export const evenGame = () => {
+const evenGame = () => {
   const name = greetUser('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const question = getRandomNumber();
@@ -23,3 +23,5 @@ export const evenGame = () => {
   }
   congratulateUser(name);
 };
+
+export default evenGame;

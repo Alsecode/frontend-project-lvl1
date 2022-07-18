@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../getRandomNumber.js';
+import getRandomNumber from '../getRandomNumber.js';
 import {
   greetUser, questionUser, checkUserAnswer, congratulateUser,
 } from '../index.js';
@@ -17,7 +17,7 @@ const isPrime = (number) => {
   return noDivisor;
 };
 
-export const primeGame = () => {
+const primeGame = () => {
   const name = greetUser('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const question = getRandomNumber();
@@ -35,3 +35,5 @@ export const primeGame = () => {
   }
   congratulateUser(name);
 };
+
+export default primeGame;

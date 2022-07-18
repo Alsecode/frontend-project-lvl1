@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../getRandomNumber.js';
+import getRandomNumber from '../getRandomNumber.js';
 import {
   greetUser, questionUser, checkUserAnswer, congratulateUser,
 } from '../index.js';
@@ -23,7 +23,7 @@ const gcd = (question) => {
   return gcdNum;
 };
 
-export const gcdGame = () => {
+const gcdGame = () => {
   const name = greetUser('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
     const question = getQuestion();
@@ -36,3 +36,5 @@ export const gcdGame = () => {
   }
   congratulateUser(name);
 };
+
+export default gcdGame;
