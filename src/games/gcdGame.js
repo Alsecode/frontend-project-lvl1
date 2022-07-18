@@ -13,9 +13,9 @@ const getQuestion = () => {
 const gcd = (question) => {
   const numbers = question.split(' ');
   const [firstNumber, secondNumber] = numbers;
-  let gcdNum = 1;
+  let gcdNum = 0;
   const minNumber = Math.min(firstNumber, secondNumber);
-  for (let i = 1; i <= minNumber; i += 1) {
+  for (let i = 0; i <= minNumber; i += 1) {
     if (firstNumber % i === 0 && secondNumber % i === 0) {
       gcdNum = i;
     }
