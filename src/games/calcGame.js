@@ -1,7 +1,7 @@
-import { getRandomNumber } from './getRandomNumber.js';
+import { getRandomNumber } from '../getRandomNumber.js';
 import {
   greetUser, questionUser, checkUserAnswer, congratulateUser,
-} from './index.js';
+} from '../index.js';
 
 const getRandomOperation = () => {
   const range = 3;
@@ -24,13 +24,13 @@ const solveExpression = (question) => {
   let result = 0;
   switch (operation) {
     case '+':
-      result = firstNumber + secondNumber;
+      result = Number(firstNumber) + Number(secondNumber);
       break;
     case '-':
-      result = firstNumber - secondNumber;
+      result = Number(firstNumber) - Number(secondNumber);
       break;
     case '*':
-      result = firstNumber * secondNumber;
+      result = Number(firstNumber) * Number(secondNumber);
       break;
     default:
       break;

@@ -1,13 +1,17 @@
-import { getRandomNumber } from './getRandomNumber.js';
 import {
   greetUser, questionUser, checkUserAnswer, congratulateUser,
-} from './index.js';
+} from '../index.js';
+
+const getRandomNumber = (min, max) => {
+  const rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+};
 
 const getQuestion = () => {
   // Размер прогрессии не менее 6 и не более 10
-  const progressionSize = getRandomNumber(5) + 6;
-  const firstNumber = getRandomNumber(100);
-  const progressionDiff = getRandomNumber(10) + 1;
+  const progressionSize = getRandomNumber(5, 10);
+  const firstNumber = getRandomNumber(1, 100);
+  const progressionDiff = getRandomNumber(1, 10);
   const progression = [firstNumber];
   let currentNum = firstNumber;
 
@@ -16,7 +20,7 @@ const getQuestion = () => {
     progression.push(currentNum);
   }
 
-  const missingIndex = getRandomNumber(progressionSize) + 1;
+  const missingIndex = getRandomNumber(1, progressionSize);
   progression[missingIndex] = '...';
   return progression.join(' ');
 };

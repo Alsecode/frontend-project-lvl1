@@ -1,7 +1,7 @@
-import { getRandomNumber } from './getRandomNumber.js';
+import { getRandomNumber } from '../getRandomNumber.js';
 import {
   greetUser, questionUser, checkUserAnswer, congratulateUser,
-} from './index.js';
+} from '../index.js';
 
 const getQuestion = () => {
   const firstNumber = getRandomNumber();
