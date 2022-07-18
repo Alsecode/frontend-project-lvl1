@@ -21,7 +21,7 @@ const getQuestion = () => {
   }
 
   const missingIndex = getRandomNumber(1, progressionSize);
-  progression[missingIndex] = '...';
+  progression[missingIndex] = '..';
   return progression.join(' ');
 };
 
@@ -35,7 +35,7 @@ const findMissingElement = (question) => {
   }
   let missingElement;
   for (let i = 1; i < progression.length; i += 1) {
-    if (progression[i] === '...') {
+    if (progression[i] === '..') {
       missingElement = Number(progression[i - 1]) + progressionDiff;
     }
   }
